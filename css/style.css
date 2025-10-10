@@ -1,0 +1,23 @@
+body {
+    background-color: lightgray;
+}
+
+nav {
+    background-color: aqua;
+}
+nav ul {
+    display: flex;
+    gap: .75rem;
+    list-style: none;
+}
+
+article {
+    background-color: antiquewhite;
+}
+.container {
+    background-color: blueviolet;
+}
+
+#main {
+    background-color: blue;
+}
