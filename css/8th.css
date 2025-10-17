@@ -7,3 +7,6 @@
     padding: 50px;
     background-color: red;
 }
+body {
+    height: 200vh;
+}
