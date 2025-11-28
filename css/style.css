@@ -1,23 +1,170 @@
+/* --- Root Variables for Theme Colors --- */
+:root {
+    --main-bg-color: #a3b8b1; /* Muted Green/Gray background from the image */
+    --sidebar-bg-color: #697d73; /* Darker Green/Gray for sidebar */
+    --header-accent-color: #8d0000; /* Red accent for borders/text */
+    --text-color-dark: #333;
+    --text-color-light: #fff;
+    --font-japanese: "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+/* --- Global Reset and Body Styling --- */
 body {
-    background-color: lightgray;
+    font-family: var(--font-japanese);
+    background-color: var(--main-bg-color);
+    color: var(--text-color-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-width: 1000px; /* Prevent layout collapse on narrower screens */
 }
 
-nav {
-    background-color: aqua;
-}
-nav ul {
+/* --- Header and Title Section --- */
+.page-header {
+    /* Header layout mimics the split top-left logo and center-right title */
     display: flex;
-    gap: .75rem;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    padding-left: 200px; /* Space for the fixed sidebar */
+    padding-right: 20px;
+    border-bottom: 2px solid var(--header-accent-color);
+    background-color: #fff; /* White background for the header area */
+}
+
+.logo-area {
+    position: absolute; /* Position logo over the fixed sidebar */
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 60px;
+    background-color: var(--sidebar-bg-color);
+    color: var(--text-color-light);
+    font-size: 1.2rem;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--header-accent-color);
+    margin: 0;
+    /* Red line below the title */
+    border-bottom: 4px solid var(--header-accent-color); 
+    padding-bottom: 5px;
+}
+
+/* --- Main Layout: Sidebar + Content --- */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 60px); /* Fill remaining viewport height */
+}
+
+/* --- Portal Menu (Fixed Sidebar) --- */
+.portal-menu {
+    width: 200px;
+    background-color: var(--sidebar-bg-color);
+    position: fixed; /* Fixed position */
+    top: 60px; /* Below the header */
+    bottom: 0;
+    padding: 0;
+    color: var(--text-color-light);
+    overflow-y: auto; /* Allow scrolling if menu is long */
+}
+
+.menu-heading {
+    background-color: #333; /* Dark background for headings */
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.nav-links {
     list-style: none;
+    padding: 10px 0;
+    margin: 0;
 }
 
-article {
-    background-color: antiquewhite;
-}
-.container {
-    background-color: blueviolet;
+.nav-links li a {
+    display: block;
+    color: var(--text-color-light);
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 0.9rem;
 }
 
-#main {
-    background-color: blue;
+.nav-links li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight for the active 'GOODS' link */
+.nav-links li.active-link {
+    background-color: var(--header-accent-color);
+}
+
+.nav-links li.active-link a {
+    font-weight: bold;
+    color: #fff;
+}
+
+.sidebar-ad {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar-ad .ad-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Content Grid (Main Items) --- */
+.content-grid {
+    margin-left: 200px; /* Offset to make space for the fixed sidebar */
+    flex-grow: 1;
+    padding: 20px;
+    display: grid;
+    /* 4 columns for the items, matching the image */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+}
+
+.item-card {
+    background-color: #fff; /* White card background */
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.item-image {
+    width: 100%;
+    /* Use max-height to ensure images don't stretch card size too much */
+    max-height: 250px; 
+    object-fit: contain;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.item-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 5px 0 0;
+    flex-grow: 1;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-left: 200px; /* Aligns with the main content area */
 }
