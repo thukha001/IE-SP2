@@ -1,144 +1,96 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Football Jersey Store</title>
+    <title>Football Store Online</title>
     <link rel="stylesheet" href="css/12th.css" />
 </head>
 
 <body>
-    <!-- ========== HEADER ========== -->
-    <header class="top-header">
 
-      
-        <h1>⚽ Elite Football Jerseys</h1>
-        
-    </header>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">⚽ FootballStore</div>
 
-    <!-- ========== SIDE MENU ========== -->
-    <aside class="side-menu">
-        <ul>
-            <li><a href="#">Popular Menu</a></li>
-            <li><a href="#">Top</a></li>
-            <li><a href="#">Premier League</a></li>
-            <li><a href="#">La Liga</a></li>
-            <li><a href="#">Serie A</a></li>
-            <li><a href="#">Bundesliga</a></li>
-            <li><a href="#">International</a></li>
-            <li><a href="#">Classic Jerseys</a></li>
-            <li><a href="#">Kids</a></li>
-            <li><a href="#">Sale</a></li>
+        <ul class="menu">
+            <li><a href="#home" class="active">🏠 Home</a></li>
+            <li><a href="#products">🛒 Products</a></li>
+            <li><a href="#kits">👕 Jerseys</a></li>
+            <li><a href="#boots">🥾 Boots</a></li>
+            <li><a href="#balls">⚽ Balls</a></li>
+            <li><a href="#gloves">🧤 Gloves</a></li>
+            <li><a href="#accessories">🎒 Accessories</a></li>
+        </ul>
+
+        <div class="section-title">Account</div>
+        <ul class="menu">
+            <li><a href="#cart">🛍 Cart</a></li>
+            <li><a href="#contact">📞 Contact</a></li>
         </ul>
     </aside>
 
-    <!-- ========== HERO SECTION ========== -->
-    <section class="hero">
-        <h2>Find Your Favorite Club Jersey</h2>
-        <p>High-quality jerseys from top teams around the world</p>
-    </section>
+    <!-- MAIN CONTENT -->
+    <main class="content">
 
-    <!-- ========== PRODUCTS ========== -->
-    <section class="products">
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <h1>Premium Football Gear</h1>
+            <p>Shop official kits, boots, balls & accessories.</p>
+            <button class="shop-btn">Shop Now</button>
+        </section>
 
-        <!-- CARD 1 -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1577212017184-80cc0da11082?q=80&w=987" alt="Arsenal">
-            <h3>Team 1 Home Jersey</h3>
-            <p>$59.99</p>
-            <button>Add to Cart</button>
-        </div>
+        <!-- PRODUCTS -->
+        <section class="products" id="products">
+            <h2>Featured Products</h2>
 
-        <!-- CARD 2 -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1737646063751-7d3402627246?q=80&w=987" alt="Manchester United">
-            <h3>Team 2 Home Jersey</h3>
-            <p>$64.99</p>
-            <button>Add to Cart</button>
-        </div>
+            <div class="product-grid">
 
-        <!-- CARD 3 -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1738091063217-1f59463342c9?q=80&w=1036" alt="Messi Jersey">
-            <h3>Team 3 Away Jersey</h3>
-            <p>$69.99</p>
-            <button>Add to Cart</button>
-        </div>
+                <!-- SAMPLE PRODUCT CARD -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1645846123684-f6f33a2eb3ec?q=80" alt="Predator Boots">
+                    <h3>Adidas Predator Elite</h3>
+                    <p class="price">$189.99</p>
+                    <button class="add-cart">Add to Cart</button>
+                </div>
 
-        <!-- CARD 4 -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1578434479660-7dbfe9b50f09?q=80&w=987" alt="Jersey">
-            <h3>Team 4 Away Jersey</h3>
-            <p>$69.99</p>
-            <button>Add to Cart</button>
-        </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1596122787821-95c4255bb936?q=80" alt="Mercurial Boots">
+                    <h3>Nike Mercurial Superfly</h3>
+                    <p class="price">$199.99</p>
+                    <button class="add-cart">Add to Cart</button>
+                </div>
 
-        <!-- CARD 5 -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1718337799103-f1080ce21ba6?q=80&w=3087" alt="Jersey">
-            <h3>Team 5 Away Jersey</h3>
-            <p>$69.99</p>
-            <button>Add to Cart</button>
-        </div>
+                <div class="product-card">
+                    <img src="https://trendstylefiji.com/cdn/shop/files/FullSizeRender.jpg" alt="Barcelona Kit">
+                    <h3>Barcelona Home Jersey 2025</h3>
+                    <p class="price">$79.99</p>
+                    <button class="add-cart">Add to Cart</button>
+                </div>
 
-        <!-- CARD 6 -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1657824982865-5952b6fcb446?q=80&w=927" alt="Jersey">
-            <h3>Team 6 Away Jersey</h3>
-            <p>$69.99</p>
-            <button>Add to Cart</button>
-        </div>
+                <div class="product-card">
+                    <img src="https://championskit.in/cdn/shop/files/rn-image_picker.jpg" alt="Real Madrid">
+                    <h3>Real Madrid Home Jersey 2025</h3>
+                    <p class="price">$84.99</p>
+                    <button class="add-cart">Add to Cart</button>
+                </div>
 
-        <!-- CARD 7 -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1764116679127-dc9d2c1138a7?q=80&w=987" alt="Jersey">
-            <h3>Team 7 Away Jersey</h3>
-            <p>$69.99</p>
-            <button>Add to Cart</button>
-        </div>
+            </div>
+        </section>
 
-        <!-- CARD 8 -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1641947521468-a2699a318c62?q=80&w=926" alt="Jersey">
-            <h3>Team 8 Away Jersey</h3>
-            <p>$69.99</p>
-            <button>Add to Cart</button>
-        </div>
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@footballstore.com</p>
+            <p>Phone: +85 07090272142</p>
+        </section>
 
-        <!-- CARD 9 -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1751875184658-da1fcb0b8bab?q=80&w=986" alt="Jersey">
-            <h3>Team 9 Away Jersey</h3>
-            <p>$69.99</p>
-            <button>Add to Cart</button>
-        </div>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>&copy; 2025 FootballStore. All Rights Reserved.</p>
+        </footer>
 
-        <!-- CARD 10 -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1552066379-e340103938b9?q=80&w=3087" alt="Jersey">
-            <h3>Team 10 Away Jersey</h3>
-            <p>$69.99</p>
-            <button>Add to Cart</button>
-        </div>
-
-    </section>
-
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-
-        <div class="pagination">
-            <a href="#" class="prev">PREVIOUS</a>
-            <a href="#" class="page active">1</a>
-            <a href="#" class="page">2</a>
-            <a href="#" class="page">3</a>
-            <a href="#" class="page">4</a>
-            <a href="#" class="next">NEXT</a>
-        </div>
-
-        <p>© 2025 Elite Football Jerseys</p>
-
-    </footer>
+    </main>
 
 </body>
 </html>
